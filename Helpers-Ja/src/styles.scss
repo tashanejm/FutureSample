@@ -1,3 +1,13 @@
+@import "variables";
+
+/*
+Primary Color: #FFD180
+complementary color: ##80afff
+ANALOGOUS color: ##ff9180, ##eeff80
+TRIADIC color: ##afff80, ##80ffd0
+*/
+
+
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -12,26 +22,28 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$Helpers-Ja-primary: mat.define-palette(mat.$indigo-palette);
-$Helpers-Ja-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+//$primary-color: mat.define-palette(mat.$indigo-palette);
+//$accent-color: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$primary-color: $orange-A100;
+$accent-color: $orange-600;
 
 // The warn palette is optional (defaults to red).
-$Helpers-Ja-warn: mat.define-palette(mat.$red-palette);
-
+//$warn-color: mat.define-palette(mat.$red-palette);
+$warn-color: $deep-orange-A700;
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$Helpers-Ja-theme: mat.define-light-theme((
+$theme: mat.define-light-theme((
   color: (
-    primary: $Helpers-Ja-primary,
-    accent: $Helpers-Ja-accent,
-    warn: $Helpers-Ja-warn,
+    primary: $primary-color,
+    accent: $accent-color,
+    warn: $warn-color,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($Helpers-Ja-theme);
+@include mat.all-component-themes($theme);
 
 /* You can add global styles to this file, and also import other style files */
 body {
