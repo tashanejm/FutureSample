@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import {FooterModule} from "./components/footer/footer.module";
 import {HeaderModule} from "./components/header/header.module";
 import { BaseComponent } from './components/common/base/component/base.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -33,7 +34,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

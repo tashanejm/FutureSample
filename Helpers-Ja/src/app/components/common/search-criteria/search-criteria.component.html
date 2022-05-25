@@ -1,8 +1,9 @@
 <div>
-    <input id="search-input" type="text" class="border-round-left" pinputtext>
+  <form [formGroup]="baseForm">
+    <input id="search-input" type="text" class="border-round-left border-noround-right" pInputText
+           formControlName="input"
+           (keydown)="onSearch($event)">
     <button id="search-button" class="p-button-rounded border-noround-left"
-      (click)="onSearch()"
-     pButton pRipple 
-    type="button" 
-    [label]="'common.fields.search' | translate"></button>
+            (click)="onSearch($event)" pButton pRipple type="button" [label]="'common.fields.search' | translate"></button>
+  </form>
 </div>

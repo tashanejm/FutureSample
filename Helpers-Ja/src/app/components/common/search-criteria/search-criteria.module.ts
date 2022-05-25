@@ -5,19 +5,30 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { SearchCriteriaService } from './search-criteria.service';
 import { HttpClientModule } from '@angular/common/http';
+import {RippleModule} from "primeng/ripple";
+import {InputTextModule} from "primeng/inputtext";
+import {MatButtonModule} from "@angular/material/button";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
-  declarations: [
-    SearchCriteriaComponent
-  ],
+    declarations: [
+        SearchCriteriaComponent
+    ],
   imports: [
     CommonModule,
-    ButtonModule,
     TranslateModule,
-    HttpClientModule
+    ButtonModule,
+    RippleModule,
+    InputTextModule,
+    ReactiveFormsModule,
+    MatProgressBarModule
   ],
-  providers: [
-    SearchCriteriaService
-  ]
+    exports: [
+        SearchCriteriaComponent
+    ],
+    providers: [
+        SearchCriteriaService
+    ]
 })
 export class SearchCriteriaModule { }

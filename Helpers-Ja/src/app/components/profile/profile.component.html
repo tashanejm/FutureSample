@@ -1,0 +1,10 @@
+<div class="profile">
+  <p-avatar icon="pi pi-user" shape="circle" tabindex="0"
+            (click)="onProfileClick($event)" (keypress)="onProfileClick($event)"
+            [pTooltip]="'common.fields.profile' | translate"></p-avatar>
+  <p-overlayPanel #overlayPanel>
+    <ng-template pTemplate="content">
+      Hello User!
+    </ng-template>
+  </p-overlayPanel>
+</div>

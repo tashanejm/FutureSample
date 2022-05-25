@@ -5,14 +5,20 @@ import { BaseCrudService } from '../base/service/base-crud.service';
 import { BaseService } from '../base/service/base.service';
 
 @Injectable()
-export class SearchCriteriaService extends BaseCrudService {
+export class SearchCriteriaService extends BaseCrudService<any> {
 
   constructor(private readonly httpClient: HttpClient) {
     super();
   }
-   
 
-  public queryMockData(): Observable<any[]> {
 
+  public get queryMockData$(): Observable<any[]> {
+    this.loadingBehaviorSubject.next(true);
+    setTimeout(() => {
+      console.log('loading completed')
+      this.loadingBehaviorSubject.next(false);
+    }, 5000);
+
+    return undefined!;
   }
 }

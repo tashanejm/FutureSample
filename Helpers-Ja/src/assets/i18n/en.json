@@ -6,6 +6,7 @@
 
     },
     "fields": {
+      "profile": "Profile",
       "search": "Search"
     }
   }

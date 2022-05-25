@@ -5,6 +5,8 @@ import {HomeRoutingModule} from "./home-routing.module";
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
 import { TranslateModule } from '@ngx-translate/core';
+import {SearchCriteriaModule} from "../common/search-criteria/search-criteria.module";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 
 
@@ -12,12 +14,14 @@ import { TranslateModule } from '@ngx-translate/core';
   declarations: [
     HomeComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    ButtonModule,
-    RippleModule,
-    TranslateModule
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        ButtonModule,
+        RippleModule,
+        TranslateModule,
+        SearchCriteriaModule,
+        MatProgressBarModule
+    ]
 })
 export class HomeModule { }
